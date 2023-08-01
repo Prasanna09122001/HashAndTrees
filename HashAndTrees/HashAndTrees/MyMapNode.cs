@@ -43,18 +43,18 @@ namespace HashAndTrees
         public void Remove(K key)
         {
             int position = GetArrayPosition(key);
-            LinkedList<KeyValue<K,V>> linkedlist = GetLinkedList(position);
+            LinkedList<KeyValue<K, V>> linkedlist = GetLinkedList(position);
             bool itemfound = false;
             KeyValue<K, V> foundItem = default(KeyValue<K, V>);
-            foreach(KeyValue<K,V> item in linkedlist)
+            foreach (KeyValue<K, V> item in linkedlist)
             {
-                if(item.Key.Equals(key))
+                if (item.Key.Equals(key))
                 {
                     itemfound = true;
                     foundItem = item;
                 }
             }
-            if(itemfound)
+            if (itemfound)
             {
                 linkedlist.Remove(foundItem);
             }
@@ -68,7 +68,7 @@ namespace HashAndTrees
                 items[position] = linkedlist;
             }
             return linkedlist;
-        }
+        } 
     }
         public struct KeyValue<k,v>
         {
