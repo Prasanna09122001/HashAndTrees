@@ -5,7 +5,7 @@ namespace HashAndTrees
     {
         static void Main()
         {
-            string statement ="To be Or Not To be";
+            string statement = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
             string[] sentence = statement.Split(" ");
             MyMapNode<string, string> hash = new MyMapNode<string, string>(sentence.Length);
             for (int i = 0; i < sentence.Length; i++)
