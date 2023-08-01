@@ -26,6 +26,18 @@ namespace HashAndTrees
                 if (sentence[i]!=null)
                     Console.WriteLine("The Frequency of the Word " + sentence[i] + " is " + Count);
             }
+            string word = "avoidable";
+            int count = 0;
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if(hash.get(Convert.ToString(i)) == word)
+                {
+                    hash.Remove(Convert.ToString(i));
+                    count++;
+                }
+            }
+            if(count==0)
+                Console.WriteLine("You Entered the Wrong Word. Enter the correct word to Remove");
         }
     }
 }
